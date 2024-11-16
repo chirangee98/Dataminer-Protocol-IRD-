@@ -7078,9 +7078,9 @@ public class WriteParameters
 	public System.Object Mountavailability_contextmenu {get { return Protocol.GetParameter(1049); }set { Protocol.SetParameter(1049, value); }}
 	/// <summary>PID: 1081  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Pollingstatelinuxmonitoreddisks {get { return Protocol.GetParameter(1081); }set { Protocol.SetParameter(1081, value); }}
-	/// <summary>PID: 1098  | Type: write | DISCREETS: Processor... = Processor, Raw CPU... = Raw CPU, Ext Commands... = Ext Commands</summary>
+	/// <summary>PID: 1098  | Type: write | DISCREETS: Raw CPU... = Raw CPU</summary>
 	public System.Object Generalbutton2 {get { return Protocol.GetParameter(1098); }set { Protocol.SetParameter(1098, value); }}
-	/// <summary>PID: 1099  | Type: write | DISCREETS: Load... = Load</summary>
+	/// <summary>PID: 1099  | Type: write</summary>
 	public System.Object Generalbutton {get { return Protocol.GetParameter(1099); }set { Protocol.SetParameter(1099, value); }}
 	/// <summary>PID: 1200  | Type: write | DISCREETS: Clear Task Manager = Clear Task Manager, Normalize Alarms = Normalize Alarms</summary>
 	public System.Object Clearnormalizetm {get { return Protocol.GetParameter(1200); }set { Protocol.SetParameter(1200, value); }}
@@ -10178,13 +10178,13 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 1081  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Pollingstatelinuxmonitoreddisks_1081 {get { return GetParameter(1081); }set { SetParameter(1081, value); }}
-	/// <summary>PID: 1098  | Type: write | DISCREETS: Processor... = Processor, Raw CPU... = Raw CPU, Ext Commands... = Ext Commands</summary>
+	/// <summary>PID: 1098  | Type: write | DISCREETS: Raw CPU... = Raw CPU</summary>
 	public System.Object Generalbutton2_1098 {get { return GetParameter(1098); }set { SetParameter(1098, value); }}
-	/// <summary>PID: 1098  | Type: write | DISCREETS: Processor... = Processor, Raw CPU... = Raw CPU, Ext Commands... = Ext Commands</summary>
+	/// <summary>PID: 1098  | Type: write | DISCREETS: Raw CPU... = Raw CPU</summary>
 	public System.Object Generalbutton2 {get { return Write.Generalbutton2; }set { Write.Generalbutton2 = value; }}
-	/// <summary>PID: 1099  | Type: write | DISCREETS: Load... = Load</summary>
+	/// <summary>PID: 1099  | Type: write</summary>
 	public System.Object Generalbutton_1099 {get { return GetParameter(1099); }set { SetParameter(1099, value); }}
-	/// <summary>PID: 1099  | Type: write | DISCREETS: Load... = Load</summary>
+	/// <summary>PID: 1099  | Type: write</summary>
 	public System.Object Generalbutton {get { return Write.Generalbutton; }set { Write.Generalbutton = value; }}
 	/// <summary>PID: 1105  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

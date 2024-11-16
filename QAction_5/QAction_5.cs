@@ -88,10 +88,9 @@ public static class QAction
                     rftunning.Pf_rf_Signal,
                     rftunning.Pf_rf_status,
                 });
+                protocol.FillArray(250, tableRows, NotifyProtocol.SaveOption.Full);
                 SetChannalInfo(protocol, rftunning.Pf_rf_channel_info, programTableRows, ref programIndex, rftunning);
             }
-
-            protocol.FillArray(250, tableRows, NotifyProtocol.SaveOption.Full);
         }
         catch (Exception ex)
         {
@@ -121,6 +120,13 @@ public static class QAction
 
     private static void SetChannalInfo(SLProtocol protocol, string channelInfo, List<object[]> programTableRows, ref int programIndex, RfTunningList rftunning)
     {
+        // Check if channelInfo is null or empty
+        if (string.IsNullOrEmpty(channelInfo))
+        {
+            protocol.Log("Channel info is null or empty. Skipping this entry.", LogType.Error, LogLevel.NoLogging);
+            return;
+        }
+
         // Parse JSON
         JObject json;
         try
@@ -185,10 +191,14 @@ public static class QAction
                 audioCodec,    // Audio codec
                 });
             }
-        }
 
-        // Insert the program data for the current RF tuning entry into the program table (PID 280)
-        protocol.FillArray(280, programTableRows, NotifyProtocol.SaveOption.Full);
+            // Insert the program data for the current RF tuning entry into the program table (PID 280)
+            protocol.FillArray(280, programTableRows, NotifyProtocol.SaveOption.Full);
+        }
+        else
+        {
+            protocol.Log("No program_info found or it is empty.", LogType.Error, LogLevel.NoLogging);
+        }
     }
 
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);

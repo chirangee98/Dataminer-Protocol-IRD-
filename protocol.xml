@@ -10405,17 +10405,17 @@ Counter64 object contained in the ifTable or ifXTable.  If no such discontinuiti
 				<Type width="110">pagebutton</Type>
 				<Discreets>
 					<Discreet>
+						<Display>Raw CPU...</Display>
+						<Value>Raw CPU</Value>
+					</Discreet>
+					<!--<Discreet>
 						<Display>Processor...</Display>
 						<Value>Processor</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Raw CPU...</Display>
-						<Value>Raw CPU</Value>
-					</Discreet>
-					<Discreet>
 						<Display>Ext Commands...</Display>
 						<Value>Ext Commands</Value>
-					</Discreet>
+					</Discreet>-->
 				</Discreets>
 			</Measurement>
 		</Param>
@@ -10443,11 +10443,11 @@ Counter64 object contained in the ifTable or ifXTable.  If no such discontinuiti
 			<Measurement>
 				<Type width="110">pagebutton</Type>
 				<Discreets>
-					<Discreet>
+					<!--<Discreet>
 						<Display>Load...</Display>
 						<Value>Load</Value>
 					</Discreet>
-					<!--<Discreet>
+					<Discreet>
 						<Display>Ping...</Display>
 						<Value>Ping</Value>
 					</Discreet>
